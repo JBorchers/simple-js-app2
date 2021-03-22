@@ -6,3 +6,13 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+
+.page-header__item {
+  flex: 0 1 200px;
+  width: 150px;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
