@@ -6,8 +6,9 @@ let pokemon = [
 
 for (let i=0; i < pokemon.length; i++){
   if (pokemon[i].height <5){
-    document.write(pokemon[i].name + " (" + pokemon[i].height + ")" + " - this is a small pokemon");
+    document.write(pokemon[i].name + " (" + pokemon[i].height + " feet)" + " - this is a small pokemon<br>"
+    );
   }else {
-    document.write(pokemon[i].name + " (" + pokemon[i].height + ")" + " - wow that is a big pokemon!");
+    document.write(pokemon[i].name + " (" + pokemon[i].height + " feet)" + " - wow that is a big pokemon!<br>");
   }
 }
