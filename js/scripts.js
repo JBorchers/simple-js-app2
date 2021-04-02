@@ -22,11 +22,13 @@ let pokemonRepository = (function () {
       button.classList.add('button-class');
       listItem.appendChild(button);
       pokemonList.appendChild(listItem);
+      // event listeners for each button
       button.addEventListener('click', function (event) {
         showDetails(pokemon);
       });
     }
 
+    // displays pokemon details in console
     function showDetails(pokemon) {
       console.log(pokemon);
     }
