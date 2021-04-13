@@ -33,8 +33,7 @@ let pokemonRepository = (function () {
       });
     }
     
-    // displays pokemon details in console
-    // opens modal with pokemon information
+       // opens modal with pokemon information
     function showDetails(item) {
       pokemonRepository.loadDetails(item).then(function () {
         showModal(item);
@@ -85,7 +84,7 @@ let pokemonRepository = (function () {
     }
     
     // hides modal when "escape" key is pressed
-    window.addEventListener('keydown', (e) => {
+      window.addEventListener('keydown', (e) => {
       let modalContainer = document.querySelector('#modal-container');
       if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
         hideModal();  
@@ -93,15 +92,13 @@ let pokemonRepository = (function () {
     });
     
     // hides modal when clicked outside of modal
-    //   let modalContainer = document.querySelector('#modal-container');
-    //   modalContainer.addEventListener('click', (e) => {
-    //   // Since this is also triggered when clicking INSIDE the modal
-    //   // We only want to close if the user clicks directly on the overlay
-    //   let target = e.target;
-    //   if (target === modalContainer) {
-    //     hideModal();
-    //   }
-    // });
+      let modalContainer = document.querySelector('#modal-container');
+      modalContainer.addEventListener('click', (e) => {
+      let target = e.target;
+      if (target === modalContainer) {
+        hideModal();
+      }
+    });
     
     
     
