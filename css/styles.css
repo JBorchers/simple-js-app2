@@ -29,3 +29,48 @@ li {
   font-size: 16px;
   cursor: pointer;
 }
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* to show above other content */
+  z-index: 999;
+  /* allows scrolling if screen is not high enough */
+  overflow: auto;
+  /* centers modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  background: white;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-close {
+  background: none;
+  color: darkgrey;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.modal p {
+  text-align: center;
+}
