@@ -65,7 +65,7 @@ let pokemonRepository = (function () {
       contentElement.innerText = "height: " + pokemon.height + " feet tall";
       
       // pokemon image
-      let imageElement = document.querySelector('img');
+      let imageElement = document.createElement('img');
       imageElement.src = pokemon.imageUrl;      
       
       
