@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Simple JS App</title>
-    <!-- <link
+    <!-- to apply bootstrap css into application - needs to be before any other custom styles -->
+    <!-- overwrite boostrap styles in styles.css -->
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
-    /> -->
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;300;400&display=swap"
       rel="stylesheet"
@@ -26,21 +28,25 @@
     <div id="modal-container">
       <!-- <div class="modal"></div> -->
     </div>
-    <!-- <script
+    <!-- follwing three links apply bootstrap to javascript - apply AFTER jquery -->
+    <!-- 1. dependency (jQuery) for bootstrap to work -->
+    <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <!-- 2. dependency () -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
+    <!-- 3. this is Boostrap's javascript file -->
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
     <script src="js/scripts.js"></script>
