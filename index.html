@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- navigation bar  -->
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-dark fixed-top">
       <a class="navbar-brand" href="index.html">
         <img src="img/pokemon_logo.png" alt="pokemon logo" width="150" />
       </a>
@@ -28,8 +28,9 @@
         <input
           class="form-control mr-sm-2"
           type="search"
-          placeholder="Search"
+          placeholder="Search Pokedex"
           aria-label="Search"
+          id="searchInput"
         />
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
@@ -39,7 +40,7 @@
     <!-- <header class="page-header">
       <img src="img/pokemon_logo.png" alt="logo" class="page-header__item" />
     </header> -->
-    <ul class="pokemon-list"></ul>
+    <ul class="pokemon-list" id="pokemonList"></ul>
 
     <!-- Modal -->
     <div
