@@ -52,7 +52,7 @@ li {
   text-align: center;
 }
 
-.modal {
+/* .modal {
   margin: auto;
   display: inline-block;
   background: white;
@@ -60,7 +60,7 @@ li {
   width: 100%;
   max-width: 600px;
   text-align: center;
-}
+} */
 
 .modal-close {
   background: none;
