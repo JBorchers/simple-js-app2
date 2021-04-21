@@ -79,9 +79,7 @@ let pokemonRepository = (function () {
       
     }
     
-    
-    
-    
+        
     // FETCHES complete list of pokemon from URL
     function loadList() {
       return fetch(apiUrl).then(function (response) {
