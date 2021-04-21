@@ -83,3 +83,9 @@ li {
 .modal p {
   text-align: center;
 }
+
+.modal img {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
