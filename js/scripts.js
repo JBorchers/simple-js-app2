@@ -3,6 +3,7 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
   
+  
   function getAll() {
     return pokemonList;
   }
@@ -79,7 +80,7 @@ let pokemonRepository = (function () {
       
     }
     
-        
+    
     // FETCHES complete list of pokemon from URL
     function loadList() {
       return fetch(apiUrl).then(function (response) {
@@ -112,6 +113,16 @@ let pokemonRepository = (function () {
         console.error(e);
       });
     }
+    
+    // searchbar narrows down pokemon list
+    $(document).ready(function(){
+      $("#searchInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#pokemonList li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
     
     // sends data outside of function
     return {
