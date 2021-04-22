@@ -14,7 +14,7 @@ body {
 ul {
   margin: auto;
   margin-top: 7rem;
-  width: auto;
+  width: 600px;
 }
 li {
   list-style-type: none;
