@@ -16,7 +16,7 @@ body {
 ul {
   margin: auto;
   margin-top: 7rem;
-  width: 700px;
+  width: auto;
 }
 
 li {
@@ -25,7 +25,7 @@ li {
 
 .list-group-item {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-image: linear-gradient(to right, #d82c2c, #ff6200, #d82c2c);
+  background-image: linear-gradient(to right, #d82c2c, #ff7723, #d82c2c);
   border-radius: 0.25rem;
   margin: 4px;
 }
