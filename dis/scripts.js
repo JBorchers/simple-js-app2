@@ -1,10 +1,10 @@
 let pokemonRepository = (function () {
   let t = [],
-    e = "https://pokeapi.co/api/v2/pokemon/?limit=151";
+    e = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
   function n(e) {
-    "object" == typeof e && "name" in e
+    'object' == typeof e && 'name' in e
       ? t.push(e)
-      : console.log("pokemon is not correct");
+      : console.log('pokemon is not correct');
   }
   function o(t) {
     pokemonRepository.loadDetails(t).then(function () {
@@ -12,15 +12,15 @@ let pokemonRepository = (function () {
     });
   }
   function i(t) {
-    let e = $(".modal-body"),
-      n = $(".modal-title");
-    $(".modal-header");
+    let e = $('.modal-body'),
+      n = $('.modal-title');
+    $('.modal-header');
     n.empty(), e.empty();
-    let o = $("<h1>" + t.name + "</h1>"),
-      i = $("<p>height: " + t.height + " feet tall</p>"),
-      l = $("<p>weight: " + t.weight + " pounds</p>"),
-      s = $("<p>type: " + a(t.types) + "</p>"),
-      c = document.createElement("img");
+    let o = $('<h1>' + t.name + '</h1>'),
+      i = $('<p>height: ' + t.height + ' feet tall</p>'),
+      l = $('<p>weight: ' + t.weight + ' pounds</p>'),
+      s = $('<p>type: ' + a(t.types) + '</p>'),
+      c = document.createElement('img');
     (c.src = t.imageUrl),
       n.append(o),
       e.append(c),
@@ -35,9 +35,9 @@ let pokemonRepository = (function () {
   }
   return (
     $(document).ready(function () {
-      $("#searchInput").on("keyup", function () {
+      $('#searchInput').on('keyup', function () {
         var t = $(this).val().toLowerCase();
-        $("#pokemonList li").filter(function () {
+        $('#pokemonList li').filter(function () {
           $(this).toggle($(this).text().toLowerCase().indexOf(t) > -1);
         });
       });
@@ -48,19 +48,19 @@ let pokemonRepository = (function () {
       },
       add: n,
       addListItem: function (t) {
-        let e = document.querySelector(".pokemon-list"),
-          n = document.createElement("li");
-        n.classList.add("list-group-item"),
-          n.classList.add("list-group-item-action");
-        let i = document.createElement("button");
+        let e = document.querySelector('.pokemon-list'),
+          n = document.createElement('li');
+        n.classList.add('list-group-item'),
+          n.classList.add('list-group-item-action');
+        let i = document.createElement('button');
         (i.innerText = t.name),
-          i.classList.add("btn"),
-          i.classList.add("btn-block"),
-          i.setAttribute("data-target", "#pokemonModal"),
-          i.setAttribute("data-toggle", "modal"),
+          i.classList.add('btn'),
+          i.classList.add('btn-block'),
+          i.setAttribute('data-target', '#pokemonModal'),
+          i.setAttribute('data-toggle', 'modal'),
           n.appendChild(i),
           e.appendChild(n),
-          i.addEventListener("click", function () {
+          i.addEventListener('click', function () {
             o(t);
           });
       },
