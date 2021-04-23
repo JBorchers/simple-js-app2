@@ -1,98 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Simple JS App</title>
-    <!-- to apply bootstrap css into application - needs to be before any other custom styles -->
-    <!-- overwrite boostrap styles in styles.css -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="dis/styles.css" />
-  </head>
-  <body>
-    <!-- navigation bar  -->
-    <nav class="navbar navbar-light bg-dark fixed-top">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/pokemon_logo.png" alt="pokemon logo" width="150" />
-      </a>
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search Pokedex"
-          aria-label="Search"
-          id="searchInput"
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
-    </nav>
-    <!-- <header class="page-header">
-      <img src="img/pokemon_logo.png" alt="logo" class="page-header__item" />
-    </header> -->
-    <ul class="pokemon-list" id="pokemonList"></ul>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="pokemonModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="pokemonModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="pokemonModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple JS App</title>
+  <!-- to apply bootstrap css into application - needs to be before any other custom styles -->
+  <!-- overwrite boostrap styles in styles.css -->
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;300;400&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" type="text/css" href="dis/styles.css" />
+</head>
+<body>
+  <!-- navigation bar  -->
+  <nav class="navbar navbar-light bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/pokemon_logo.png" alt="pokemon logo" />
+    </a>
+    <form class="form-inline">
+      <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Search Pokedex"
+      aria-label="Search"
+      id="searchInput"
+      />
+    </form>
+  </nav>
+  <!-- <header class="page-header">
+    <img src="img/pokemon_logo.png" alt="logo" class="page-header__item" />
+  </header> -->
+  <ul class="pokemon-list" id="pokemonList"></ul>
+  
+  <!-- Modal -->
+  <div
+  class="modal fade"
+  id="pokemonModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="pokemonModalLabel"
+  aria-hidden="true"
+  >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pokemonModalLabel">Modal title</h5>
+        <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+        >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
+    <div class="modal-body"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+</div>
 
-    <!-- follwing three links apply bootstrap to javascript - apply AFTER jquery -->
-    <!-- 1. dependency (jQuery) for bootstrap to work -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
-    <script src="dis/scripts.js"></script>
-  </body>
+<!-- follwing three links apply bootstrap to javascript - apply AFTER jquery -->
+<!-- 1. dependency (jQuery) for bootstrap to work -->
+<script
+src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"
+></script>
+<script
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+crossorigin="anonymous"
+></script>
+<script src="js/promise-polyfill.js"></script>
+<script src="js/fetch-polyfill.js"></script>
+<script src="dis/scripts.js"></script>
+</body>
 </html>
